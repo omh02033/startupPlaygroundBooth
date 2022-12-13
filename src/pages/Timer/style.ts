@@ -1,5 +1,5 @@
 import { styled } from '#/stitches.config';
-import { Hexile, Vexile } from '@/components';
+import { Button, Vexile } from '@/components';
 import { default as background } from '@/assets/background.svg';
 
 export const Wrapper = styled('div', {
@@ -66,13 +66,7 @@ export const RemainSec = styled('span', {
   fontWeight: 700,
 });
 
-export const ReplayButton = styled(Hexile, {
-  padding: '3rem 9rem',
-  borderRadius: '5rem',
-  fontSize: '4rem',
-  color: '$white2',
-  fontWeight: 700,
-  background: '$orange',
+export const ReplayButton = styled(Button, {
   position: 'absolute',
   bottom: '20%',
 });

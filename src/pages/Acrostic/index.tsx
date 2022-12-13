@@ -1,12 +1,22 @@
 import React from 'react';
-import { useNavigate } from 'react-router';
+import { RemainTime, Timer, Wrapper } from './style';
+import { CountdownCircleTimer } from 'react-countdown-circle-timer';
 
 export const Acrostic: React.FC = () => {
-  const navigation = useNavigate();
   return (
-    <>
-      <h1>사행시페이지</h1>
-      <span onClick={() => navigation('/acrostic/record')}>이동</span>
-    </>
+    <Wrapper>
+      <Timer x='center' y='center'>
+        <CountdownCircleTimer
+          isPlaying
+          duration={60}
+          colors="#F69000"
+          initialRemainingTime={60}
+          size={100}
+          children={({ remainingTime }) => (
+            <RemainTime>{remainingTime}</RemainTime>
+          )}
+        />
+      </Timer>
+    </Wrapper>
   );
 };
