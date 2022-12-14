@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { ToastContainer } from 'react-toastify';
 import { globalCss } from '#/stitches.config';
 
 import {
@@ -11,6 +12,7 @@ import {
 } from '@/pages';
 
 import '@/assets/Pretendard/pretendard.css';
+import 'react-toastify/dist/ReactToastify.min.css';
 
 globalCss({
   ':root': {
@@ -47,6 +49,7 @@ const Renderer = () => (
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
     <BrowserRouter>
+      <ToastContainer />
       <Renderer />
     </BrowserRouter>
   </React.StrictMode>

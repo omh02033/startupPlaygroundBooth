@@ -51,3 +51,8 @@ export const RemainCnt = styled('span', {
   textAlign: 'center',
   color: '$orange',
 });
+
+export const StartButton = styled(Button, {
+  position: 'absolute',
+  bottom: '20%',
+});
