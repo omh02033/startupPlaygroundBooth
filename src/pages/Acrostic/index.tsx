@@ -71,6 +71,7 @@ export const Acrostic: React.FC = () => {
               colors={COLORS.orange as ColorFormat}
               initialRemainingTime={60}
               size={70}
+              strokeWidth={7}
               children={({ remainingTime }) => (
                 <RemainTime>{remainingTime}</RemainTime>
               )}

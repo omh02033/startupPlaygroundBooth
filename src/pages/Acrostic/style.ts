@@ -19,9 +19,9 @@ export const Timer = styled(Hexile, {
 });
 
 export const RemainTime = styled('span', {
-  fontSize: '6rem',
+  fontSize: '5rem',
   color: '$orange',
-  fontWeight: 800,
+  fontWeight: 700,
 });
 
 export const Letter = styled(Hexile, {
