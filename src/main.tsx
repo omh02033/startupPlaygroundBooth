@@ -26,6 +26,7 @@ globalCss({
   '*': {
     wordBreak: 'keep-all',
     userSelect: 'none',
+    boxSizing: 'border-box',
   },
   img: {
     '-webkit-user-drag': 'none',
