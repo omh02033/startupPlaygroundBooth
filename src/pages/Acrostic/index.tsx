@@ -15,6 +15,8 @@ import {
 import { COLORS } from '#/stitches.config';
 import { Button, Hexile, Vexile } from '@/components';
 import { toast } from 'react-toastify';
+import { db } from '@/firebase';
+import { collection, addDoc } from 'firebase/firestore';
 
 export const Acrostic: React.FC = () => {
   const word = ['시', '간', '관', '리'];
@@ -36,6 +38,22 @@ export const Acrostic: React.FC = () => {
       e.target.value,
       ...prev.slice(idx + 1, word.length),
     ]);
+  };
+
+  const acrosticSubmit = async () => {
+    try {
+      if (contentLen >= maxLen) return;
+  
+      await addDoc(collection(db, 'acrostic'), {
+        acrostic,
+      });
+  
+      toast.success('등록되었습니다');
+      setTimeover(true);
+    } catch (e) {
+      console.log(e);
+      toast.error('등록하는 중 에러가 발생했습니다.');
+    }
   };
 
   return (
@@ -82,7 +100,7 @@ export const Acrostic: React.FC = () => {
                 {contentLen}/{maxLen}
               </RemainCnt>
             </Vexile>
-            <Button>등록하기</Button>
+            <Button onClick={acrosticSubmit}>등록하기</Button>
           </Vexile>
         </>
       )}
