@@ -1,5 +1,5 @@
 import { styled } from '#/stitches.config';
-import { Button, Hexile, Vexile } from '@/components';
+import { Button, Hexile } from '@/components';
 import { default as background } from '@/assets/background.svg';
 
 export const Wrapper = styled('div', {
@@ -14,14 +14,14 @@ export const Wrapper = styled('div', {
 
 export const Timer = styled(Hexile, {
   position: 'absolute',
-  top: '20rem',
+  top: '17rem',
   left: '20rem',
 });
 
 export const RemainTime = styled('span', {
-  fontSize: '7rem',
+  fontSize: '6rem',
   color: '$orange',
-  fontWeight: 900,
+  fontWeight: 800,
 });
 
 export const Letter = styled(Hexile, {

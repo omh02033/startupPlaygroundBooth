@@ -70,7 +70,7 @@ export const Acrostic: React.FC = () => {
               duration={60}
               colors={COLORS.orange as ColorFormat}
               initialRemainingTime={60}
-              size={100}
+              size={70}
               children={({ remainingTime }) => (
                 <RemainTime>{remainingTime}</RemainTime>
               )}
