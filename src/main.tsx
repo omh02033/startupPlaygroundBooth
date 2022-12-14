@@ -27,6 +27,9 @@ globalCss({
     wordBreak: 'keep-all',
     userSelect: 'none',
   },
+  img: {
+    '-webkit-user-drag': 'none',
+  },
 })();
 
 const Renderer = () => (

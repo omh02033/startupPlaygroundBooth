@@ -83,7 +83,7 @@ export const Timer: React.FC = () => {
         <Container x="center" y="center" fillx filly>
           <Vexile x="center" fillx gap={2}>
             <Hexile gap={3} y="center">
-              {remainSec <= 10 ? (
+              {remainSec <= 20 ? (
                 <>
                   <TrophyImg src={trophy} />
                   <WinWhether>WINNER!</WinWhether>
